@@ -1,3 +1,4 @@
+"use strict";
 /*
 function soma(a: number,b: number){
     return a + b;
@@ -159,33 +160,14 @@ const estudante: Estudante = {
     serie: '1'
 }
 
-
-import $ from 'jquery';
-
-$.fn.extend({
-    novaFuncao(){
+*/
+exports.__esModule = true;
+exports.numero = void 0;
+var jquery_1 = require("jquery");
+jquery_1["default"].fn.extend({
+    novaFuncao: function () {
         console.log('Chamou nova funcao');
     }
 });
-
 // $('body').novaFuncao(); quando comenta no arquivo typings.d.ts nao vai achar mais 
-
-export const numero = 2;
-
-
-*/
-
-interface Pessoa{
-    nome: string;
-    idade: number;
-    nacionalidade: string;
-}
-
-interface Brasileiro extends Omit<Pessoa, 'nacionalidade'>{ // ISSO VAI OMITIR O ATRIBUTO NACIONALIDADE; TEM MUITOS OUTROS ALEM DO OMIT
-
-}
-
-const brasileiro: Brasileiro = {
-    nome: 'Rafael',
-    idade: 32
-}
+exports.numero = 2;
