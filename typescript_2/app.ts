@@ -1,16 +1,18 @@
-let button = document.getElementById('button');
-let input1 = document.getElementById('input1') as HTMLInputElement;
-let input2 = document.getElementById('input2') as HTMLInputElement;
+let anyEstaDeVolta: any;
+anyEstaDeVolta = 3;
+anyEstaDeVolta = 'teste';
+anyEstaDeVolta = 5;
+let stringTest: string = 'verificar';
+stringTest = anyEstaDeVolta;
+let unknownValor: unknown;
+unknownValor = 3;
+unknownValor = 'opa';
+unknownValor = true;
+unknownValor = 'vai sim';
 
-function adicionarNumero(numero1: number, numero2: number){
-    return numero1 + numero2;
+let stringTest2: string = 'agora vai';
+//stringTest2 = unknownValor; NAO ACEITA UNKNOWN; TEM QUE VERIFICAR SE É STRING MESMO ANTES O ANY DEIXA; O UNKNOWN NAO
+
+if(typeof unknownValor === 'string'){
+    stringTest2 = unknownValor;
 }
-
-if(button){
-    button.addEventListener('click', () => {
-        if(input1 && input2){
-            console.log(adicionarNumero(Number(input1.value), Number(input2.value)));
-        }
-    });
-}
-
