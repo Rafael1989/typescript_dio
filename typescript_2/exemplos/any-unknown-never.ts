@@ -16,3 +16,9 @@ let stringTest2: string = 'agora vai';
 if(typeof unknownValor === 'string'){
     stringTest2 = unknownValor;
 }
+
+function jogaErro(erro: string, codigo: number): never{ // never é quando acontece algo que interrompe
+    throw {error: erro, code: codigo}
+}
+
+jogaErro('deu erro', 500);
